@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Filas SUS - Gerenciamento de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Sistema de Filas SUS</h1>
+            <p class="header-subtitle">Gerenciamento de Atendimento Público</p>
+        </div>
+    </header>
+
+    <!-- Navegação -->
+    <nav class="nav" id="mainNav">
+        <div class="container">
+            <button class="nav-btn" data-page="home">Início</button>
+            <button class="nav-btn" id="queueNavBtn" data-page="queue">Minha Fila</button>
+            <button class="nav-btn" id="notificationsNavBtn" data-page="notifications">Avisos</button>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="main">
+        <div class="container">
+
+            <!-- Página Inicial -->
+            <section class="page active" id="homePage">
+                <div class="welcome-card">
+                    <h2 class="section-title">Bem-vindo ao SUS Digital</h2>
+                    <p class="welcome-text">Agende consultas e acompanhe sua posição na fila de atendimento</p>
+                    <div class="button-group">
+                        <button class="btn btn-primary" data-page="login">Entrar</button>
+                        <button class="btn btn-secondary" data-page="register">Cadastrar</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página de Login -->
+            <section class="page" id="loginPage">
+                <button class="btn-back" data-page="home">← Voltar</button>
+                <div class="form-card">
+                    <h2 class="section-title">Entrar no Sistema</h2>
+                    <form id="loginForm" class="form">
+                        <div class="form-group">
+                            <label class="form-label" for="loginCpf">CPF</label>
+                            <input type="text" class="form-input" id="loginCpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="loginPassword">Senha</label>
+                            <input type="password" class="form-input" id="loginPassword" placeholder="Digite sua senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Entrar</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Página de Cadastro -->
+            <section class="page" id="registerPage">
+                <button class="btn-back" data-page="home">← Voltar</button>
+                <div class="form-card">
+                    <h2 class="section-title">Novo Cadastro</h2>
+                    <form id="registerForm" class="form">
+                        <div class="form-group">
+                            <label class="form-label" for="registerName">Nome Completo</label>
+                            <input type="text" class="form-input" id="registerName" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="registerCpf">CPF</label>
+                            <input type="text" class="form-input" id="registerCpf" placeholder="000.000.000-00" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="registerBirth">Data de Nascimento</label>
+                            <input type="date" class="form-input" id="registerBirth" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="registerEmail">Telefone</label>
+                            <input type="tel" class="form-input" id="registerEmail" placeholder="email@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="registerPassword">Senha</label>
+                            <input type="password" class="form-input" id="registerPassword" placeholder="Crie uma senha" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Cadastrar</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Página de Agendamento -->
+            <section class="page" id="schedulingPage">
+                <h2 class="section-title">Agendar Atendimento</h2>
+                <div class="form-card">
+                    <form id="schedulingForm" class="form">
+                        <div class="form-group">
+                            <label class="form-label-large" for="serviceType">Tipo de Atendimento</label>
+                            <select class="form-select" id="serviceType" required>
+                                <option value="">Selecione o serviço</option>
+                                <option value="consulta">Consulta Médica</option>
+                                <option value="exame">Exames</option>
+                                <option value="vacina">Vacinação</option>
+                                <option value="retorno">Retorno</option>
+                                <option value="emergencia">Pronto Atendimento</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label-large" for="appointmentDate">Data</label>
+                            <input type="date" class="form-input" id="appointmentDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label-large" for="appointmentTime">Horário</label>
+                            <select class="form-select" id="appointmentTime" required>
+                                <option value="">Selecione o horário</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label-large" for="healthUnit">Unidade de Saúde</label>
+                            <select class="form-select" id="healthUnit" required>
+                                <option value="">Selecione a unidade</option>
+                                <option value="ubs-centro">UBS Centro</option>
+                                <option value="ubs-flores">UBS Jardim das Flores</option>
+                                <option value="ubs-vila">UBS Vila Nova</option>
+                                <option value="hospital">Hospital Municipal</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-xlarge">Confirmar Agendamento</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Página de Acompanhamento da Fila -->
+
+            <!-- Página de Notificações -->
+ 
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-title">Sistema Único de Saúde - SUS</p>
+            <p class="footer-subtitle">Saúde é um direito de todos</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

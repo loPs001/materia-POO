@@ -1,0 +1,9 @@
+[
+    {
+        "cpf": "555555555",
+        "paciente": "Ismael Lopes Pessoa",
+        "tipoConsulta": "Ortopedista",
+        "dataHora": "2026-04-10 14:43:06",
+        "status": "Agendado"
+    }
+]
