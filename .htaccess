@@ -1,6 +1,9 @@
 RewriteEngine On
-RewriteBase /Materia-POO/
+RewriteBase /agendamento-sigf/
 
+# Se o pedido NÃO for um arquivo ou diretório existente
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php [QSA,L]
+# Redireciona tudo para dentro da pasta public/index.php
+RewriteRule ^(.*)$ public/index.php [QSA,L]
+AddDefaultCharset UTF-8

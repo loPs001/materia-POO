@@ -3,15 +3,16 @@ class Consulta {
     public string $cpf;
     public string $paciente;
     public string $tipoConsulta;
-    public $dataHora;
+    public string $dataHora;
+    public string $unidade; 
     public $status;
 
-
-    public function __construct (string $cpf, string $pac, string $tipoConsulta,$dtH = null, $status = "Agendado"  ) {
+    public function __construct (string $cpf, string $pac, string $tipoConsulta, string $dtH, string $uni, $status = "Agendado"  ) {
         $this->cpf = $cpf;
         $this->paciente = $pac;
         $this-> tipoConsulta = $tipoConsulta;
-        $this->dataHora = $dtH ?? date('Y-m-d H:i:s');
+        $this->dataHora = $dtH ?? null;
+        $this-> unidade = $uni;
         $this->status = $status;
     }   
 

@@ -1,9 +1,26 @@
 [
     {
-        "cpf": "555555555",
+        "cpf": "2131231231",
         "paciente": "Ismael Lopes Pessoa",
-        "tipoConsulta": "Ortopedista",
+        "tipoConsulta": "Exames",
         "dataHora": "2026-04-10 14:43:06",
+        "unidade": "UBS Centro",
+        "status": "Agendado"
+    },
+    {
+        "cpf": "12345678",
+        "paciente": "Teste",
+        "tipoConsulta": "consulta",
+        "dataHora": "2026-05-15 11:00",
+        "unidade": "ubs-vila",
+        "status": "Agendado"
+    },
+    {
+        "cpf": "12345678",
+        "paciente": "Teste",
+        "tipoConsulta": "exame",
+        "dataHora": "2026-05-29 09:00",
+        "unidade": "ubs-centro",
         "status": "Agendado"
     }
 ]

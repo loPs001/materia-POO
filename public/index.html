@@ -27,7 +27,6 @@
     <!-- Conteúdo Principal -->
     <main class="main">
         <div class="container">
-
             <!-- Página Inicial -->
             <section class="page active" id="homePage">
                 <div class="welcome-card">
@@ -54,7 +53,7 @@
                             <label class="form-label" for="loginPassword">Senha</label>
                             <input type="password" class="form-input" id="loginPassword" placeholder="Digite sua senha" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-large">Entrar</button>
+                        <button type="button" class="btn btn-primary btn-large" id="btnEntrar">Entrar</button>
                     </form>
                 </div>
             </section>
@@ -74,24 +73,80 @@
                             <input type="text" class="form-input" id="registerCpf" placeholder="000.000.000-00" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="registerBirth">Data de Nascimento</label>
-                            <input type="date" class="form-input" id="registerBirth" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="registerEmail">Telefone</label>
-                            <input type="tel" class="form-input" id="registerEmail" placeholder="email@email.com" required>
+                            <label class="form-label" for="registerEmail">Email</label>
+                            <input type="email" class="form-input" id="registerEmail" placeholder="email@email.com" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="registerPassword">Senha</label>
                             <input type="password" class="form-input" id="registerPassword" placeholder="Crie uma senha" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-large">Cadastrar</button>
+                        <button type="button" class="btn btn-primary btn-large" id="btnCadastrar">Cadastrar</button>
                     </form>
+                </div>
+            </section>
+
+            <!-- Página de usuario home -->
+            <section class="page" id="userHomePage">
+                <div class="user-welcome">
+                    <h2 class="section-title">Olá, <span id="displayUserName">Usuário</span>!</h2>
+                    <p class="user-subtitle">O que você deseja fazer hoje?</p>
+                </div>
+
+                <div class="menu-grid">
+                    <button class="menu-card" data-page="scheduling">
+                        <h3 class="menu-title">Agendar Atendimento</h3>
+                        <p class="menu-description">Marque uma consulta ou exame</p>
+                    </button>
+
+                    <button class="menu-card" data-page="appointments">
+                        <h3 class="menu-title">Consultas Marcadas</h3>
+                        <p class="menu-description">Veja seus agendamentos</p>
+                    </button>
+
+                    <button class="menu-card" data-page="userOptions">
+                        <h3 class="menu-title">Opções de Usuário</h3>
+                        <p class="menu-description">Configurações da conta</p>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Página de Consultas Marcadas -->
+            <section class="page" id="appointmentsPage">
+                <button class="btn-back" data-page="userHome">← Voltar</button>
+                <h2 class="section-title">Minhas Consultas Marcadas</h2>
+
+                <div class="appointments-list" id="appointmentsList">
+                    <div class="empty-state">
+                        <p class="empty-text">Você ainda não tem consultas marcadas</p>
+                        <button class="btn btn-primary" data-page="scheduling">Agendar Atendimento</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Página de Opções do Usuário -->
+            <section class="page" id="userOptionsPage">
+                <button class="btn-back" data-page="userHome">← Voltar</button>
+
+                <h2 class="section-title">Opções de Usuário</h2>
+
+                <div class="options-card">
+                    <div class="user-info">
+                        <h3 class="info-title">Informações da Conta</h3>
+                        <p class="info-text"><strong>Nome:</strong> <span id="userInfoName">-</span></p>
+                        <p class="info-text"><strong>CPF:</strong> <span id="userInfoCpf">-</span></p>
+                    </div>
+
+                    <div class="options-list">
+                        <button class="option-item" id="logoutBtn">
+                            <span class="option-text">Sair da Conta</span>
+                        </button>
+                    </div>
                 </div>
             </section>
 
             <!-- Página de Agendamento -->
             <section class="page" id="schedulingPage">
+                <button class="btn-back" data-page="userHome">← Voltar</button>
                 <h2 class="section-title">Agendar Atendimento</h2>
                 <div class="form-card">
                     <form id="schedulingForm" class="form">
@@ -102,8 +157,6 @@
                                 <option value="consulta">Consulta Médica</option>
                                 <option value="exame">Exames</option>
                                 <option value="vacina">Vacinação</option>
-                                <option value="retorno">Retorno</option>
-                                <option value="emergencia">Pronto Atendimento</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -133,18 +186,12 @@
                                 <option value="hospital">Hospital Municipal</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-xlarge">Confirmar Agendamento</button>
+                        <button type="button" class="btn btn-primary btn-xlarge" id="btnAgendarConsulta">Confirmar Agendamento</button>
                     </form>
                 </div>
             </section>
-
-            <!-- Página de Acompanhamento da Fila -->
-
-            <!-- Página de Notificações -->
- 
         </div>
     </main>
-
     <!-- Rodapé -->
     <footer class="footer">
         <div class="container">
@@ -153,6 +200,8 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/autenticacao.js"></script>
+    <script src="./js/funcionalidadesUser.js"></script>
 </body>
 </html>

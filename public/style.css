@@ -1,3 +1,4 @@
+/* ===== CASO NÃO FUNCIONE O CSS,DÊ UM REFRESH COM CTRL + SHIFT + R ===== */
 /* Reset e configurações globais */
 * {
     margin: 0;
@@ -129,6 +130,186 @@ body {
     gap: 20px;
     max-width: 400px;
     margin: 0 auto;
+}
+
+/* Home do Usuário */
+.user-welcome {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.user-subtitle {
+    font-size: 22px;
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 40px 32px;
+    text-align: center;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-card:hover {
+    border-color: #059669;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.menu-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.menu-title {
+    font-size: 24px;
+    color: #059669;
+    margin-bottom: 12px;
+}
+
+.menu-description {
+    font-size: 18px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Consultas Marcadas */
+.appointments-list {
+    background-color: white;
+    border-radius: 12px;
+    padding: 48px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-item {
+    background-color: #f0fdf4;
+    border-left: 4px solid #059669;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.appointment-service {
+    font-size: 22px;
+    font-weight: bold;
+    color: #059669;
+}
+
+.appointment-status {
+    background-color: #dcfce7;
+    color: #166534;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.appointment-info {
+    font-size: 18px;
+    color: #374151;
+    line-height: 1.8;
+}
+
+.appointment-info p {
+    margin: 4px 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.empty-text {
+    font-size: 22px;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+/* Opções de Usuário */
+.options-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 48px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.user-info {
+    background-color: #f0fdf4;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+.info-title {
+    font-size: 24px;
+    color: #059669;
+    margin-bottom: 16px;
+}
+
+.info-text {
+    font-size: 20px;
+    color: #374151;
+    margin: 12px 0;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+    background-color: #f3f4f6;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 20px;
+}
+
+.option-item:hover {
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+}
+
+.option-icon {
+    font-size: 28px;
+    margin-right: 16px;
+}
+
+.option-text {
+    color: #374151;
+    font-weight: 500;
 }
 
 /* Botões */
@@ -342,114 +523,7 @@ body {
     margin: 8px 0;
 }
 
-/* Notificações */
-.notifications-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
 
-.notification {
-    border-radius: 12px;
-    padding: 32px;
-    border: 2px solid;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.notification-success {
-    background-color: #dcfce7;
-    border-color: #22c55e;
-}
-
-.notification-warning {
-    background-color: #fef3c7;
-    border-color: #f59e0b;
-}
-
-.notification-info {
-    background-color: #dbeafe;
-    border-color: #3b82f6;
-}
-
-.notification-default {
-    background-color: white;
-    border-color: #e5e7eb;
-}
-
-.notification-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-}
-
-.notification-icon {
-    font-size: 28px;
-    margin-right: 12px;
-}
-
-.notification-title {
-    font-size: 24px;
-    margin: 0;
-}
-
-.notification-success .notification-title {
-    color: #166534;
-}
-
-.notification-warning .notification-title {
-    color: #92400e;
-}
-
-.notification-info .notification-title {
-    color: #1e3a8a;
-}
-
-.notification-default .notification-title {
-    color: #374151;
-}
-
-.notification-message {
-    font-size: 20px;
-    margin: 0;
-}
-
-.notification-success .notification-message {
-    color: #166534;
-}
-
-.notification-warning .notification-message {
-    color: #92400e;
-}
-
-.notification-info .notification-message {
-    color: #1e3a8a;
-}
-
-.notification-default .notification-message {
-    color: #6b7280;
-}
-
-.notification-time {
-    font-size: 18px;
-    margin-top: 8px;
-    margin-bottom: 0;
-}
-
-.notification-success .notification-time {
-    color: #16a34a;
-}
-
-.notification-warning .notification-time {
-    color: #d97706;
-}
-
-.notification-info .notification-time {
-    color: #3b82f6;
-}
-
-.notification-default .notification-time {
-    color: #9ca3af;
-}
 
 /* Rodapé */
 .footer {
@@ -489,6 +563,10 @@ body {
         padding: 32px 24px;
     }
 
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
     .queue-info-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -513,5 +591,13 @@ body {
 
     .nav-btn {
         width: 100%;
+    }
+
+    .appointments-list {
+        padding: 24px;
+    }
+
+    .options-card {
+        padding: 32px 24px;
     }
 }

@@ -1,34 +1,5 @@
 [
     {
-        "nome": "Ismael Lopes Pessoa",
-        "cpf": "555555555",
-        "email": "email@email.com",
-        "senha": "12345678",
-        "consultas": [
-            {
-                "cpf": "555555555",
-                "paciente": "Ismael Lopes Pessoa",
-                "tipoConsulta": "Dentista",
-                "dataHora": "2026-04-10 14:36:47",
-                "status": "Agendado"
-            },
-            {
-                "cpf": "555555555",
-                "paciente": "Ismael Lopes Pessoa",
-                "tipoConsulta": "Clinico Geral",
-                "dataHora": "2026-04-10 14:37:57",
-                "status": "Agendado"
-            },
-            {
-                "cpf": "555555555",
-                "paciente": "Ismael Lopes Pessoa",
-                "tipoConsulta": "Ortopedista",
-                "dataHora": "2026-04-10 14:43:06",
-                "status": "Agendado"
-            }
-        ]
-    },
-    {
         "nome": "Lucas",
         "cpf": "66666666",
         "email": "gmail@gmail.com",
@@ -51,10 +22,10 @@
         ]
     },
     {
-        "nome": "TESTE",
-        "cpf": "55555555",
-        "email": "join@join.com",
+        "nome": "Teste",
+        "cpf": "12345678",
+        "email": "jmail@jmail.com",
         "senha": "12345678",
-        "consulta": []
+        "consultas": []
     }
 ]
